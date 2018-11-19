@@ -1,4 +1,4 @@
-DOCKER=docker-compose run --rm --service-ports pelican
+DOCKER=docker-compose run --user $(shell id -u):$(shell id -g) --rm --service-ports pelican
 
 help:
 	@echo 'Makefile for a pelican Web site running in whatang/docker-pelican         '
