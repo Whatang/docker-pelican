@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+    pelican:
+      image: __IMAGE_TAG__
+      volumes:
+        - ./:/site
+        - ./themes:/themes
+      ports:
+        # Change the first 8000 here for the Pelican development server to
+        # be exposed on a different port
+        - "8000:8000"
